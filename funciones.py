@@ -12,7 +12,7 @@ def handleOption(option, agenda):
     elif option == '2':
         readContact(agenda)
     elif option == '3':
-        updateContact()
+        updateContact(agenda)
     elif option == '4':
         deleteContact()
     else:
@@ -27,12 +27,18 @@ def readContact(agenda):
     numero = input('Ingrese el Nro de Contacto:')
     print(agenda[int(numero)]['name'])
 
-def updateContact():
+def updateContact(agenda):
     print('Actualizar Contacto')
+    numero = input('Ingrese el Nro de Contacto:')
+    for i in range(len(agenda[numero])):
+        print(agenda[numero])
 
 def deleteContact():
     print('borrar Contacto')
 
 def defaultError():
     print('La opción seleccionada no es válida',menu1())
+
+def imprimirContacto(agenda):
+    
 
